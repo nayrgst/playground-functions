@@ -52,8 +52,10 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinkString) {
+  const numbers = drinkString.match(/\d/g);
+  const total = numbers.reduce((sum, num) => sum + Number(num), 0);
+  return total === 1 ? '1 copo de água' : `${total} copos de água`;
 }
 
 module.exports = {
