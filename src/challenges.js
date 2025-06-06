@@ -22,8 +22,13 @@ function splitSentence(phase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  const first = arr.shift();
+  const last = arr.pop();
+
+  const result = `${last}, ${first}`;
+
+  return result;
 }
 
 // Desafio 5
