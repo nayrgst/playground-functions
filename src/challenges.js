@@ -73,16 +73,31 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  return array.map((num) => {
+    const div3 = num % 3 === 0;
+    const div5 = num % 5 === 0;
+    if (div3 && div5) return 'fizzBuzz';
+    if (div5) return 'buzz';
+    if (div3) return 'fizz';
+    return 'bug!';
+  });
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  const items = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  return string
+    .split('')
+    .map((char) => items[char] || char)
+    .join('');
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  const items = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  return string
+    .split('')
+    .map((char) => items[char] || char)
+    .join('');
 }
 
 module.exports = {
